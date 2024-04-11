@@ -1,0 +1,127 @@
+{% extends 'layout.html' %} 
+{% block body %}
+
+<style>
+    html body {
+        background-color: rgb(206, 206, 228);
+
+
+    }
+</style>
+<!--Form Section-->
+<br /><br />
+<h2 style="text-align: center; margin: 0px; color: black">
+    <b>We are here to help you monitor leakage in your extensive Drip Irrigation System </b>
+</h2>
+<br />
+<div>
+<div style="
+    width: 650px;
+    height: 100rem;
+    margin: 20px auto;
+    color: black;
+    border-radius: 25px;
+    padding: 34px 40px;
+    background-color: #ffffff;
+    border-color: darkgreen;
+    border-style: solid;
+    /* border-bottom: blue; */
+    border-width: thick;
+    margin-bottom: 50dp;
+  ">
+    <form method="POST" action="{{ url_for('detect_leakage') }}">
+        <div class="form-group">
+            <label for="Node_1" style="font-size: 17px"><b>Pressure in Pipe 1</b></label>
+            <input type="number"  step=0.001 class="form-control" id="Node_1" name="pressure[]"
+                placeholder="Enter the value (example:50)" style="font-weight: bold" required />
+        </div>
+        <div class="form-group">
+            <label for="Node_2" style="font-size: 17px"><b>Pressure in Pipe 2</b></label>
+            <input type="number" step=0.001  class="form-control" id="Node_2" name="pressure[]"
+                placeholder="Enter the value (example:50)" style="font-weight: bold" required />
+        </div>
+        <div class="form-group">
+            <label for="Node_3" style="font-size: 17px"><b>Pressure in Pipe 3</b></label>
+            <input type="number" class="form-control" id="Node_3" name="pressure[]" step=0.001 
+                placeholder="Enter the value (example:50)" style="font-weight: bold" required />
+        </div>
+        <div class="form-group">
+            <label for="Node_4" style="font-size: 17px"><b>Pressure in Pipe 4</b></label>
+            <input type="number" step=0.001  class="form-control" id="Node_4" name="pressure[]"
+                placeholder="Enter the value (example:50)" style="font-weight: bold" required />
+        </div>
+        <div class="form-group">
+            <label for="Node_5" style="font-size: 17px"><b>Pressure in Pipe 5</b></label>
+            <input type="number" step=0.001  class="form-control" id="Node_5" name="pressure[]"
+                placeholder="Enter the value (example:50)" style="font-weight: bold" required />
+        </div>
+        <div class="form-group">
+            <label for="Node_6" style="font-size: 17px"><b>Pressure in Pipe 6</b></label>
+            <input type="number" step=0.001 class="form-control" id="Node_6" name="pressure[]"
+                placeholder="Enter the value (example:50)" style="font-weight: bold" required />
+        </div>
+        <div class="form-group">
+            <label for="Node_7" style="font-size: 17px"><b>Pressure in Pipe 7</b></label>
+            <input type="number" step=0.001 class="form-control" id="Node_7" name="pressure[]"
+                placeholder="Enter the value (example:50)" style="font-weight: bold" required />
+        </div>
+        <div class="form-group">
+            <label for="Node_8" style="font-size: 17px"><b>Pressure in Pipe 8</b></label>
+            <input type="number" step=0.001  class="form-control" id="Node_8" name="pressure[]"
+                placeholder="Enter the value (example:50)" style="font-weight: bold" required />
+        </div>
+        <div class="form-group">
+            <label for="Node_9" style="font-size: 17px"><b>Pressure in Pipe 9</b></label>
+            <input type="number" step=0.001  class="form-control" id="Node_9" name="pressure[]"
+                placeholder="Enter the value (example:50)" style="font-weight: bold" required />
+        </div>
+        <div class="form-group">
+            <label for="Node_10" style="font-size: 17px"><b>Pressure in Pipe 10</b></label>
+            <input type="number" step=0.001 class="form-control" id="Node_10" name="pressure[]"
+                placeholder="Enter the value (example:50)" style="font-weight: bold" required />
+        </div>
+        <div class="form-group">
+            <label for="Node_11" style="font-size: 17px"><b>Pressure in Pipe 11</b></label>
+            <input type="number" step=0.001  class="form-control" id="Node_1" name="pressure[]"
+                placeholder="Enter the value (example:50)" style="font-weight: bold" required />
+        </div>
+        <div class="form-group">
+            <label for="Node_12" style="font-size: 17px"><b>Pressure in Pipe 12</b></label>
+            <input type="number" step=0.001  class="form-control" id="Node_12" name="pressure[]"
+                placeholder="Enter the value (example:50)" style="font-weight: bold" required />
+        </div>
+        <div class="form-group">
+            <label for="Node_13" style="font-size: 17px"><b>Pressure in Pipe 13</b></label>
+            <input type="number" step=0.001 class="form-control" id="Node_13" name="pressure[]"
+                placeholder="Enter the value (example:50)" style="font-weight: bold" required />
+        </div>
+        <div class="form-group">
+            <label for="Node_14" style="font-size: 17px"><b>Pressure in Pipe 14</b></label>
+            <input type="number" step=0.001 class="form-control" id="Node_14" name="pressure[]"
+                placeholder="Enter the value (example:50)" style="font-weight: bold" required />
+        </div>
+        <div class="form-group">
+            <label for="Node_15" style="font-size: 17px"><b>Pressure in Pipe 15</b></label>
+            <input type="number" step=0.001 class="form-control" id="Node_15" name="pressure[]"
+                placeholder="Enter the value (example:50)" style="font-weight: bold" required />
+        </div>
+        <div class="form-group">
+            <label for="Node_16" style="font-size: 17px"><b>Pressure in Pipe 16</b></label>
+            <input type="number" step=0.001 class="form-control" id="Node_16" name="pressure[]"
+                placeholder="Enter the value (example:50)" style="font-weight: bold" required />
+        </div>
+
+
+
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-info"
+                style="color: black; font-weight: bold; width: 130px; height:50px; border-radius:12px; font-size: 21px;">
+                Detect
+            </button>
+        </div>
+    </form>
+</div>
+</div>
+<!-- Form section -->
+
+{% endblock %}

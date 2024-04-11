@@ -1,0 +1,106 @@
+{% extends 'layout.html' %} {% block body %}
+
+
+<style>
+  html body {
+<<<<<<< Updated upstream
+    background-color: rgb(206, 206, 228);
+  }
+=======
+    background-color: rgb(255, 255, 255);
+  }
+  .float-container {
+    border: none;
+    padding: 20px;
+}
+
+.float-child {
+    width: 50%;
+    float: left;
+    padding: 20px;
+    border: none;
+} 
+>>>>>>> Stashed changes
+</style>
+<br /><br />
+  <h2 style="text-align: center; margin: 0px; color: black">
+    <b>Find out which disease has been caught by your plant</b>
+  </h2>
+  <br />
+  <br>
+
+<<<<<<< Updated upstream
+=======
+<div class="float-container">
+
+  <div class="float-child">
+    <div class="green">
+        <img src="{{ url_for('static', filename='images/dis2.gif') }}" height="400px" class="gi" />
+    </div>
+  </div>
+  
+  <div class="float-child">
+    <div class="blue">
+        <center>
+        <form class="form-signin" method=post enctype=multipart/form-data style="padding-top: 85px;">
+
+            <h2 class="h4 mb-3 font-weight-normal"><b>Please Upload The Image</b></h2>
+            <br>
+            <input type="file" name="file" class="form-control-file" id="inputfile" onchange="preview_image(event)" style="font-weight: bold; margin-left: 185px;">
+            <br>
+            
+            <img id="output-image" class="rounded mx-auto d-block" />
+            <button class="btn btn-lg btn-primary btn-block" type="submit" style="font-weight: bold;background-color: #28a745; border: none;">Predict</button>
+        
+        
+          </form>
+        </center>
+    </div>
+  </div>
+  
+</div>
+
+  
+>>>>>>> Stashed changes
+<div style="
+    width: 350px;
+    height: 50rem;
+    margin: 0px auto;
+    color: black;
+    border-radius: 25px;
+    padding: 10px 10px;
+    font-weight: bold;
+  ">
+
+  
+<<<<<<< Updated upstream
+
+
+  <form class="form-signin" method=post enctype=multipart/form-data>
+
+    <h2 class="h4 mb-3 font-weight-normal"><b>Please Upload The Image</b></h2>
+    <input type="file" name="file" class="form-control-file" id="inputfile" onchange="preview_image(event)" style="font-weight: bold;">
+    <br>
+    <br>
+    <img id="output-image" class="rounded mx-auto d-block" />
+    <button class="btn btn-lg btn-primary btn-block" type="submit" style="font-weight: bold;">Predict</button>
+
+
+  </form>
+=======
+>>>>>>> Stashed changes
+</div>
+
+<script type="text/javascript">
+  function preview_image(event) {
+    var reader = new FileReader();
+    reader.onload = function () {
+      var output = document.getElementById('output-image')
+      output.src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
+  }
+</script>
+
+</div>
+{% endblock %}
